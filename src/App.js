@@ -5,30 +5,20 @@ import {
 } from 'antd'
 function App() {
   return (
-    <Layout  className={'m-2 mt-4'}>
-      <Row gutter={[16, 16]}>
+    // <Layout  className={'mt-4'}>
+      <Row >
         <Col md={6}  lg={6} sm={24} xs={24}>
-          <Card
-            hoverable
-            
-            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-          >
-            <Card.Meta title="Europe Street beat" description="www.instagram.com" />
-          </Card>
+         <img alt="example" style={{ width:100,height:100 }} src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+         <p>Status</p>
         </Col>
         <Col md={6}  lg={6} sm={24} xs={24}>
-          <Card
-            hoverable
-           
-            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-          >
-            <Card.Meta title="Europe Street beat" description="www.instagram.com" />
-          </Card>
+        <img alt="example" style={{ width:100,height:100 }} src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+         <p>Status</p>
         </Col>
 
 
       </Row>
-    </Layout>
+    // </Layout>
   );
 }
 

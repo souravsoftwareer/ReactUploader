@@ -19,6 +19,12 @@ function App() {
   const [fileList, setFileList] = useState([])
 
 
+
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files);
+    setFileList(files);
+  };
+
   const uploadFiles=()=>{
     if(fileList.length == 0) {
       alert("No files choosen to upload !!!!")

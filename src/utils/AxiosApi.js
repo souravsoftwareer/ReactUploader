@@ -1,4 +1,4 @@
-const axios = require('axios')
+import axios from 'axios'
 
 const getApi = (config) => {
 
@@ -60,7 +60,6 @@ const getApi = (config) => {
 
     })
 }
-
-module.exports = {
+export {
     getApi
 }

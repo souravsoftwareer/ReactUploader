@@ -3,8 +3,10 @@ import './App.css';
 import {
   Col, Row, Button
 } from 'antd'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PlusOutlined } from '@ant-design/icons';
+import { getApi } from './utils/AxiosApi';
+import { BASE_URL } from './utils/urls';
 
 const getBase64 = (file) =>
   new Promise((resolve, reject) => {
@@ -17,6 +19,7 @@ const getBase64 = (file) =>
 function App() {
 
   const [fileList, setFileList] = useState([])
+  const [dbFiles, setDbFiles] = useState([])
 
 
 
@@ -34,6 +37,26 @@ function App() {
   
   const clearFiles=()=>{
     alert("Files are cleared !!")
+  }
+
+  useEffect(()=>{
+    getAllFiles()
+  },[])
+
+  const getAllFiles=async()=>{
+     try{
+       let config = {
+          method:"get",
+          url:BASE_URL+"users/uploadFiles"
+       }
+       let response = await getApi(config)
+       let responseData = response.data
+       let files = responseData?.data??[]
+       setDbFiles([...files])
+       console.log("app response ",responseData)
+     }catch(err){
+       console.log("err ",err)
+     }
   }
 
 

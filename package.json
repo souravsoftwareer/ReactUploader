@@ -11,7 +11,8 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     
-    "antd":"5.14.2"
+    "antd":"5.14.2",
+    "axios":"1.6.7"
   },
   "scripts": {
     "start": "react-scripts start",

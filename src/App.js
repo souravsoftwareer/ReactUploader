@@ -146,6 +146,7 @@ function App() {
           <div className={'d-flex flex-row'}>
             <input type="file" multiple onChange={handleFileChange} />
             <Button type="primary" onClick={() => uploadFiles()}>Upload</Button>
+            <Button type="primary" onClick={() => getAllFiles()} style={{ marginLeft: 10 }}>Refresh</Button>
             <Button type="primary" danger onClick={() => clearFiles()} style={{ marginLeft: 10 }}>Clear Data</Button>
           </div>
         </Col>
